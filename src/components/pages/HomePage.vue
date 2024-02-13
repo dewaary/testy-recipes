@@ -1,0 +1,29 @@
+<template>
+  <div class="container-md my-5 py-5">
+    <div class="recipe__title text-center">
+      <h2>All Recipe</h2>
+      <p style="font-size: 15px">
+        Find and share everyday cooking inspiration on
+        Allrecipes.Discover recipes, cooks, videos, and
+        how-tos based on the food you love and the friends
+        you follow.
+      </p>
+    </div>
+    <!-- Recipe List Component -->
+    <div class="recipe__list-recipe row">
+      <!-- Recipe Item Code -->
+      <RecipeCard
+        v-for="(recipe, index) in recipeList"
+        :key="index"
+        :recipe="recipe"
+      />
+    </div>
+  </div>
+</template>
+
+<script setup>
+import RecipeCard from '../recipe/RecipeCard.vue';
+import RECIPE_DATA from '@/recipe';
+
+const recipeList = RECIPE_DATA;
+</script>
