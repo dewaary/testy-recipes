@@ -8,9 +8,15 @@
         <p>Welcome back! Please enter your details.</p>
       </div>
       <form>
-        <div class="my-4"><!-- Email --></div>
-        <div class="my-4"><!-- Password --></div>
+        <div class="my-4">
+          <base-input type="email" identiy="email" placeholder="Your email address" label="Email"></base-input>
+        </div>
+        <div class="my-4">
+          <base-input type="password" identiy="password" placeholder="Your password" label="Password"></base-input>
+        </div>
       </form>
+      <base-button class="login w-100 my-3">Login
+      </base-button>
       <div class="text-center mt-4">
         <p class="fw-semibold">
           Don’t have an account?<span style="color: #4c4ddc">
@@ -23,3 +29,8 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import BaseInput from '../ui/BaseInput.vue';
+import BaseButton from '../ui/BaseButton.vue';
+</script>
